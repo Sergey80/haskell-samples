@@ -1,3 +1,5 @@
+#string #chars #list
+
 -- strings are list of chars
 
 chars = ['a', 'b', 'c']       -- string is array of chars  [Char]

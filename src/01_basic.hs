@@ -1,3 +1,4 @@
+-- #equal #where #infix #prefix #function
 -- very firs steps. overal information about some arithmetic operations and how do define a function
 
 y = x * 2          -- ´x' is not yet undefined, but 'y' will be evaluated, since 'x' in the context

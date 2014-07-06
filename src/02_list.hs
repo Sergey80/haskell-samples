@@ -1,3 +1,5 @@
+-- #list #range #head #tail #cons #concatenation
+
 elems = [1,2,3]          -- list
 
 t = tail elems           -- [2,3]

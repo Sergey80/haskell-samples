@@ -25,6 +25,10 @@ Prelude> :load 01_basics.hs
 Prelude> y
 8
 
+Every time when you change code, type ":reload":
+ 
+Prelude> :reload
+
 etc.
 
 So you can play with each example and see its values.

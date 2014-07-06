@@ -8,7 +8,7 @@ z2 = (+) 2 2       -- prefix style
 -- z3 = (+) 2 2 2  -- will not work
 
 p1 = 2 ^ 3          -- 8 works only if '3' is Integer
-p2 = 2 ** 3         -- 8.0 !
+p2 = 2 ** 3.0         -- 8.0 !
 
 notEqual = 1 /= 2     -- True (not equal- as "!="in C)
 notEqual2 = not True  --False (as "!" in C)                 http://stackoverflow.com/questions/6400568/exponentiation-in-haskell

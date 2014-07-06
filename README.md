@@ -11,3 +11,19 @@ This code is supposed to be isolated as much as possible - like if we wish to ex
 Each example has no more than 100 lines of code. Also there is tagging is used in order to show to the reader what feature is involved for particular example. Like #feature-1 #feature-3.
 
 "Use the course, Luke!" (R)
+
+
+how to use
+============
+
+For now for each example you may use GHCi - http://www.haskell.org/haskellwiki/GHC/GHCi
+
+cd src
+
+Prelude> :load 01_basics.hs
+Prelude> y
+8
+
+etc.
+
+So you can play with each example and see its values.

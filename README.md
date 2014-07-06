@@ -21,6 +21,7 @@ For now for each example you may use GHCi - http://www.haskell.org/haskellwiki/G
 cd src
 
 Prelude> :load 01_basics.hs
+
 Prelude> y
 8
 

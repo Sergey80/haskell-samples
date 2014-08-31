@@ -1,4 +1,5 @@
--- #list #range #head #tail #cons #concatenation
+-- #list #range #head #tail #cons #concatenation #cycle #replicate
+-- #set-comprehansions
 
 elems = [1,2,3]          -- list
 
@@ -29,3 +30,27 @@ together = [1,2,3] ++ [4,5,6] --[1,2,3,4,5,6] combine two lists
 
 oneMore = 1 : [1,2,3]         --[1,1,2,3]  add one element in from of the list  ( ':' is called 'cons' meaning 'construct')
 
+tak10 = take 10 (cycle [1,2,3])		-- [1,2,3,1,2,3,1,2,3,1]
+
+r = replicate 3 1		-- [1,1,1]
+
+-- #set-comprehensions
+-- x <- 1..10		-- for each x from the set from 1 to 10
+-- x + 1 		-- add +1 to x
+set = [ x + 1 | x <- [1..10] ]			    -- 2,3,4,5,6,7,8,9,10,11
+
+-- with predicate
+set2 = [x*2 | x <- [1..10], x*2 >= 12 ] 	    -- [12,14,18,20]
+
+set3 = [x*2 | x <- [1..10], x `mod` 2 == 0]         -- [4,8,16,20]
+
+set4 = [ if x > 4 then "X" else "x" | x <- [1..5] ] -- ["x", "x", "x", "x", "X"]
+
+--the product of all possible combination: 
+-- 5+1, 5+2, 6+1, 6+2 
+set5 = [x+y | x <- [5..6], y <- [1..2]]		    -- [6,7,7,8]
+
+-- ["dark coffe", "dark tee", "roast coffe", "roast tee"]
+nouns =      ["coffe", "tee"]
+adjectives = ["dark", "roast"]
+beverages = [adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns]

@@ -1,7 +1,12 @@
 -- #funtion composition #. #$
 
--- "$" - http://stackoverflow.com/questions/940382/haskell-difference-between-dot-and-dollar-sign
--- "." - http://stackoverflow.com/questions/2486564/what-does-a-fullstop-or-period-or-dot-mean-in-haskell
+-- :type ($)
+-- ($) :: (a -> b) -> a -> b
+-- http://stackoverflow.com/questions/940382/haskell-difference-between-dot-and-dollar-sign
+
+-- :type: (.)
+-- (.) :: (b -> c) -> (a -> b) -> a -> c
+-- http://stackoverflow.com/questions/2486564/what-does-a-fullstop-or-period-or-dot-mean-in-haskell
 
 f1 x = x * 2
 f2 x = x $ 2            -- same as f1

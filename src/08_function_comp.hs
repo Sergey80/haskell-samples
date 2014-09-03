@@ -20,3 +20,9 @@ r1 = ff1 5                 -- 5*2*2 = 20
 r2 = ff2 5                 -- 20
 r3 = ff3 5                 -- 20
 r4 = ff4 5                 -- 20
+
+--
+
+rr1 = take 2 . repeat $ 1        -- [1,1]
+rr2 = take 2 $ repeat $ 1        -- [1,1]
+rr3 = take 2 (repeat 1)          -- [1,1]

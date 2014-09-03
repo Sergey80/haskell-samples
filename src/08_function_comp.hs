@@ -6,12 +6,12 @@
 f1 x = x * 2
 f2 x = x $ 2            -- same as f1
 
-ff1 x = f1( f1(x) )
+ff1 x = f1( f1(x) )     -- all the functions here are doing the smae thing
 ff2 x = f1 (f1 $ x)
-ff3 x = f1 $ f1 x
+ff3 x = f1 $ f1 x       -- elemenated of al "(" - ")"
 ff4 x = f1 . f1 $ x     -- function composition using "."
 
-r1 = ff1 5                 -- 20
+r1 = ff1 5                 -- 5*2*2 = 20
 r2 = ff2 5                 -- 20
 r3 = ff3 5                 -- 20
 r4 = ff4 5                 -- 20

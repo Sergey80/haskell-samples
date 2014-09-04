@@ -4,7 +4,7 @@
 elems = [1,2,3]          -- list
 
 t = tail elems           -- [2,3]
-h= head elems            -- [2]
+h = head elems            -- [2]
 
 empty = []               -- empty list
 
@@ -54,3 +54,8 @@ set5 = [x+y | x <- [5..6], y <- [1..2]]		    -- [6,7,7,8]
 nouns =      ["coffe", "tee"]
 adjectives = ["dark", "roast"]
 beverages = [adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns]
+
+-- task #1 https://projecteuler.net/problem=1
+-- Find the sum of all the multiples of 3 or 5 below 10 that are multiples of
+-- 3 or 5
+result = sum [n | n <- [1..9], m <- [3,5], n `mod` m == 0]

@@ -26,3 +26,6 @@ r4 = ff4 5                 -- 20
 rr1 = take 2 . repeat $ 1        -- [1,1]
 rr2 = take 2 $ repeat $ 1        -- [1,1]
 rr3 = take 2 (repeat 1)          -- [1,1]
+
+--
+-- let f = group . sort . words

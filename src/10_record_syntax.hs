@@ -1,0 +1,1 @@
+-- https://ghc.haskell.org/trac/ghc/wiki/Records/NameSpacing

@@ -23,6 +23,8 @@ odds1 n = map f [0..n-1]         -- here we are defining a name "f"
           where
             f x = x*2 + 1
 
+-- same as
+
 odds2 n = map (\x -> x *2 +1) [0..n-1]      -- here we just are passing a lambda  - idiomatic haskell style
 
 r1 = odds1 5  -- [1,3,5,7,9]

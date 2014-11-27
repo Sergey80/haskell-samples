@@ -1,4 +1,4 @@
--- Higher ore function
+-- Higher orer function
 -- #filter #map #foldr
 
  -- pattern matching by function (defining a map function calling it as a 'm')
@@ -39,5 +39,12 @@ myProduct (x:xs) = x * myProduct xs
 resultSum = foldr (+) 0 [1,2,3,4]           -- 10
 resultProduct = foldr (*) 1 [1,2,3,4]       -- 24
 
--- the way we may define foldr left is:
--- myFoldr :: (a -> b -> b) -> b -> [a] -> b
+-- the way we _may_ define 'foldr' is:
+myFoldr :: (a -> a -> a) -> a -> [a] -> a   -- here a'-type only for now... will see if it is Ok
+myFoldr f v [] = v                          -- here 'v' represents function that takes two params (a->a->a) and returns results
+myFoldr f v (x:xs) = f x (foldr f v xs)
+
+resultMyFoldr = myFoldr (*) 1 [1,2,3]         -- 6  - semms works. seems..
+
+--- but..
+

@@ -41,10 +41,17 @@ resultProduct = foldr (*) 1 [1,2,3,4]       -- 24
 
 -- the way we _may_ define 'foldr' is:
 myFoldr :: (a -> a -> a) -> a -> [a] -> a   -- here a'-type only for now... will see if it is Ok
-myFoldr f v [] = v                          -- here 'v' represents function that takes two params (a->a->a) and returns results
-myFoldr f v (x:xs) = f x (foldr f v xs)
+myFoldr f v [] = v  -- myFoldr (*) 1 [] = 1 -- here 'f' represents function (a->a->a), like multiply (*)
+myFoldr f v (x:xs) = f x (foldr f v xs)     -- and 'v' its first argument, and '[]' - last one
 
-resultMyFoldr = myFoldr (*) 1 [1,2,3]         -- 6  - semms works. seems..
+resultMyFoldr = myFoldr (*) 1 [1,2,3]         -- 6  - seems works.
 
---- but..
+--- for now let's define length
+myLength :: (Num a, Num b) => [a] -> b
+myLength l = foldr (\a b -> 1+b ) 0 l
+
+-- then some function, thad divides 2 to
+myDiv l = foldr (\a b -> a / b) 2 l     -- [1,1,1] = 2 / 1 = 0.5; 0.5 /2 = 1; 1 / 2 = 0.5 ...
+
+myDiv2 l = myFoldr (\a b -> 2 / b) 2 l
 

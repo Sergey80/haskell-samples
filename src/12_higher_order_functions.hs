@@ -47,11 +47,22 @@ myFoldr f v (x:xs) = f x (foldr f v xs)     -- and 'v' its first argument, and '
 resultMyFoldr = myFoldr (*) 1 [1,2,3]         -- 6  - seems works.
 
 --- for now let's define length
-myLength :: (Num a, Num b) => [a] -> b
-myLength l = foldr (\a b -> 1+b ) 0 l
+myLength :: (Num b) => [a] -> b
+myLength xs = foldr (\el acc -> acc+1) 0 xs
+
+  --[1,2,3]
+  --  acc    el
+  --1: 0  |  2   0 + 1 = 1
+  --2: 1  |  2   1 + 1 = 2
+  --2: 2  |  3   2 + 1 = 3
 
 -- then some function that do this
 myDiv l = foldr (\a b -> a / b) 2 l     -- [1,1,1] = 2 / 1 = 0.5; 0.5 /2 = 1; 1 / 2 = 0.5 ...
 
 myDiv2 l = myFoldr (\a b -> 2 / b) 2 l
+
+---
+
+-- reverse
+
 

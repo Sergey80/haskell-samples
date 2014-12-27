@@ -7,28 +7,8 @@
 
 days = [1..30]
 
-type Day  = Int
-type Count = Int
-type Speed = Int
-
-initCount = 1    -- the amount of Nymphaeas
-
 speed = 2		-- split in 'n' pieces a day
 
-squareLimit = foldl (\acc d -> if acc == 0 then 1 -- starts from 1
-						   else acc * speed )
-						   0
-						   days
+squareLimit = foldl (\acc d -> acc * speed ) 1 days
 
-count1 = squareLimit
-
-count2 = foldl (\acc d -> if acc == 0 then 1
-						   else acc * speed )
-						   1 						-- starts from 2
-						   days
-
-dayCount = foldl (\acc d -> if acc == 0 then 1
-						   else if acc >= squareLimit  then d-1
-						   else acc * speed )
-						   1 						-- starts from 2
-						   days
+dayCount = foldl (\acc d -> if acc >= squareLimit  then d-1 else acc * speed ) 2 days

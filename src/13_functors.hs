@@ -13,4 +13,10 @@
 -- map :: (a -> b) -> [a] -> [b]  
 
 -- will get Just "abc"
-r1 = fmap (++ "bc") (Just "a") -- matches the instance of Maybe-Functor
+r1 = fmap (++ "bc") (Just "a") -- matches the instance of Maybe-Functor:
+
+-- instance Functor Maybe where
+--  fmap f (Just x) = Just (f x)
+--  fmap f Nothing = Nothing
+
+

@@ -27,7 +27,7 @@
 -- let x1 = 1               -- when you type let... you create a binding
 -- let x2 = 2
 
--- concrete type of type constructor
+-- shows kind of type wheather it's concrete type or type constructor
 
 -- ghci> :k Maybe
 -- Maybe :: * -> *          -- tells us that Maybe takes one concrete type and

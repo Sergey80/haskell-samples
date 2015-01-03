@@ -26,3 +26,15 @@
 -- :show binding
 -- let x1 = 1               -- when you type let... you create a binding
 -- let x2 = 2
+
+-- concrete type of type constructor
+
+-- ghci> :k Maybe
+-- Maybe :: * -> *          -- tells us that Maybe takes one concrete type and
+                            -- reuturns another concrete type, like Maybe Int
+
+-- ghci> :k Maybe Int
+-- Maybe Int :: *           -- returns concrete type, but not taking anything 
+                            -- (Int is concrete  type, not a type constructor)
+
+                            
